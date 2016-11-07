@@ -96,7 +96,7 @@
 											$email = $_POST['email'];
 											$message = $_POST['message'];
 											$from = 'From: Website'; 
-											$to = 'jsalisay@stetson.edu'; 
+											$to = 'jdalisay@stetson.edu'; 
 											$subject = 'Website Contact';
 													
 											$body = "From: $name\n E-Mail: $email\n Message:\n $message";
@@ -104,7 +104,7 @@
 									</div>
 								</form>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" name = "submit" id = "submit" /></li>
 									if ($_POST['submit']) {				 
 												if (mail ($to, $subject, $body, $from)) { 
 												echo '<p>Your message has been sent!</p>';
