@@ -91,6 +91,8 @@
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<li><input type="submit" value="Send Message" name = "submit" id = "submit" /></li>
+
 										<?php
 											$name = $_POST['name'];
 											$email = $_POST['email'];
@@ -100,19 +102,15 @@
 											$subject = 'Website Contact';
 													
 											$body = "From: $name\n E-Mail: $email\n Message:\n $message";
-										?>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" name = "submit" id = "submit" /></li>
-									if ($_POST['submit']) {				 
+											if ($_POST['submit']) {				 
 												if (mail ($to, $subject, $body, $from)) { 
 												echo '<p>Your message has been sent!</p>';
 											} else { 
 												echo '<p>Something went wrong, go back and try again!</p>'; 
 											} 
 											}
-								</ul>
+									?>
+										
 							</div>
 							<div class="4u$ 12u$(small)">
 								<ul class="labeled-icons">
